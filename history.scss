@@ -9,7 +9,6 @@ body {
 
 main {
     width: 100%;
-    background-color: red;
 }
 
 
@@ -45,5 +44,85 @@ main {
 @media (min-width: 1400px) {
     body {
         font-size: 26px;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+
+    header.decade { 
+        font-size: 2rem;
+        font-weight: 900;
+        background: white;
+        align-items: center;
+        padding: 30px 0px 0px 0px;
+        gap: 15px;
+
+        height: 74px;
+
+        background: #FFFFFF;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+
+        &::before {
+            /* Ellipse 1 */
+
+            box-sizing: border-box;
+
+            width: 20px;
+            height: 20px;
+
+            background: #FFFFFF;
+            border: 2px solid #C50000;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+    }
+    
+    .tl-card {
+        display: flex;
+        padding: 0px 10px;
+        gap: 15px;
+        font-size: 1rem;
+        
+        .tl-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            gap: 30px;
+            border-left: 1px solid #999;
+            
+            .tl-text {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 50%;
+                gap: 10px;
+                
+                .tl-headline {
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    line-height: 1.2;
+                }
+            }
+            .tl-img {
+                flex: 1 1 50%;
+                img {width: 100%;}
+                &:has(img[src=""]) {
+                    display: none;
+                 }
+            }
+        }
     }
 }
