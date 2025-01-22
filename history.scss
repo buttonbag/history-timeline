@@ -4,7 +4,7 @@
 
 /* Default mobile styles */
 body {
-
+  font-size: 16px;
 }
 
 main {
@@ -14,36 +14,55 @@ main {
 
 /* Tablet styles */
 @media (min-width: 600px) {
-    body {
+    #dpu-timeline {
         font-size: 18px;
     }
 }
 
 /* Tablet landscape styles */
 @media (min-width: 768px) {
-    body {
+    #dpu-timeline {
         font-size: 20px;
     }
 }
 
 /* Small laptop styles */
 @media (min-width: 992px) {
-    body {
+    #dpu-timeline {
         font-size: 22px;
     }
 }
 
 /* Large laptop styles */
 @media (min-width: 1200px) {
-    body {
+    #dpu-timeline {
         font-size: 24px;
     }
 }
 
 /* Extra large screens */
 @media (min-width: 1400px) {
-    body {
+    #dpu-timeline {
         font-size: 26px;
+    }
+}
+
+nav {
+    overflow:auto;
+    scrollbar-width: none;
+
+    .tl-nav {
+        list-style: none;
+        display: flex;
+        padding: 30px 0px;
+        gap: 15px;
+a {
+font-family: 'Proxima Nova Condensed';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+
+color: #0E4174;}
     }
 }
 
