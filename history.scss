@@ -52,39 +52,29 @@ section {
     flex-direction: column;
 
     header.decade { 
+        display: flex;
         font-size: 2rem;
         font-weight: 900;
         background: white;
+        color: #0057b7;
         align-items: center;
         padding: 30px 0px 0px 0px;
         gap: 15px;
+        position: sticky;
+        top: 0;
 
-        height: 74px;
-
-        background: #FFFFFF;
-
-        /* Inside auto layout */
-        flex: none;
-        order: 0;
-        align-self: stretch;
-        flex-grow: 0;
+        &.small {
+            font-size: 1rem;
+            padding: 0px;
+        }
 
         &::before {
             /* Ellipse 1 */
-
-            box-sizing: border-box;
-
+            content: "";
             width: 20px;
             height: 20px;
-
-            background: #FFFFFF;
             border: 2px solid #C50000;
-
-            /* Inside auto layout */
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-
+            border-radius: 100%;
         }
     }
     
