@@ -16,7 +16,7 @@ nav {
   overflow: auto;
   scrollbar-width: none;
   margin-bottom: -1px;
-  /* fixes chrome bug */
+  /* fixes chrome bug that makes section headers jittery after scrollTo*/
 }
 nav .tl-nav {
   list-style: none;
