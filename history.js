@@ -4,7 +4,7 @@ function monitorHeaderPosition() {
 
   const checkPosition = () => {
    
-    const elementAtTop = document.elementFromPoint(0, 0);
+    const elementAtTop = document.elementFromPoint(0, 15);
 
     //check top element
     if (elementAtTop?.tagName === "HEADER" && elementAtTop.classList.contains(targetClass)) {
