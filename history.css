@@ -11,36 +11,6 @@ main {
   width: 100%;
 }
 
-/* Tablet styles */
-@media (min-width: 600px) {
-  #dpu-timeline {
-    font-size: 18px;
-  }
-}
-/* Tablet landscape styles */
-@media (min-width: 768px) {
-  #dpu-timeline {
-    font-size: 20px;
-  }
-}
-/* Small laptop styles */
-@media (min-width: 992px) {
-  #dpu-timeline {
-    font-size: 22px;
-  }
-}
-/* Large laptop styles */
-@media (min-width: 1200px) {
-  #dpu-timeline {
-    font-size: 24px;
-  }
-}
-/* Extra large screens */
-@media (min-width: 1400px) {
-  #dpu-timeline {
-    font-size: 26px;
-  }
-}
 nav {
   overflow: auto;
   scrollbar-width: none;
@@ -74,10 +44,12 @@ section header.decade {
   gap: 15px;
   position: sticky;
   top: 0;
+  transition: 0.2s all ease-in-out;
 }
 section header.decade.small {
   font-size: 1rem;
   padding: 0px;
+  box-shadow: 4px 0px 0px #000000;
 }
 section header.decade::before {
   /* Ellipse 1 */
@@ -91,10 +63,11 @@ section .tl-card {
   display: flex;
   padding: 0px 10px;
   gap: 15px;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 section .tl-card .tl-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 30px;
@@ -111,17 +84,56 @@ section .tl-card .tl-content .tl-text .tl-headline {
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.55rem;
   line-height: 1.2;
 }
 section .tl-card .tl-content .tl-img {
   flex: 1 1 50%;
+  width: 100%;
 }
 section .tl-card .tl-content .tl-img img {
   width: 100%;
 }
 section .tl-card .tl-content .tl-img:has(img[src=""]) {
   display: none;
+}
+
+/* Tablet styles */
+@media (min-width: 600px) {
+  #dpu-timeline {
+    font-size: 1.2rem;
+  }
+}
+/* Tablet landscape styles */
+@media (min-width: 768px) {
+  #dpu-timeline {
+    font-size: 20px;
+  }
+
+  section .tl-card .tl-content {
+    flex-direction: row;
+  }
+  section .tl-card .tl-img {
+    width: auto;
+  }
+}
+/* Small laptop styles */
+@media (min-width: 992px) {
+  #dpu-timeline {
+    font-size: 22px;
+  }
+}
+/* Large laptop styles */
+@media (min-width: 1200px) {
+  #dpu-timeline {
+    font-size: 24px;
+  }
+}
+/* Extra large screens */
+@media (min-width: 1400px) {
+  #dpu-timeline {
+    font-size: 26px;
+  }
 }
 
 /*# sourceMappingURL=history.css.map */
