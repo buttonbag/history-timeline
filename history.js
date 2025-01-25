@@ -1,10 +1,13 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* decade headers */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 function monitorHeaderPosition() {
   const targetClass = "decade"; // header class
   const stickyClass = "small"; // sticky class
 
   const checkPosition = () => {
    
-    const elementAtTop = document.elementFromPoint(0, 15);
+    const elementAtTop = document.elementFromPoint(window.innerWidth/2, 15);
 
     //check top element
     if (elementAtTop?.tagName === "HEADER" && elementAtTop.classList.contains(targetClass)) {
@@ -32,3 +35,4 @@ function monitorHeaderPosition() {
 }
 
 monitorHeaderPosition();
+
