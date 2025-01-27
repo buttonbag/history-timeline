@@ -1,5 +1,5 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* decade headers */
+/* sticky top decade headers */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 function monitorHeaderPosition() {
   const targetClass = "decade"; // header class
@@ -36,3 +36,28 @@ function monitorHeaderPosition() {
 
 monitorHeaderPosition();
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* header nav */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+const header = document.querySelectorAll('.nav');
+
+header.forEach(element => {
+  element.innerHTML += `
+    <ul class="tl-nav">
+      <li class="tl-nav-item"><a href="#section1">1800s</a></li>
+      <li class="tl-nav-item"><a href="#section2">1900s</a></li>
+      <li class="tl-nav-item"><a href="#section3">1910s</a></li>
+      <li class="tl-nav-item"><a href="#section4">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section5">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section6">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section7">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section8">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section9">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section10">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section11">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section12">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section13">0000s</a></li>
+      <li class="tl-nav-item"><a href="#section14">0000s</a></li>
+    </ul>`;
+});
