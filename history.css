@@ -17,24 +17,36 @@ nav {
   margin-bottom: -1px;
   /* fixes chrome bug that makes section headers jittery after scrollTo*/
 }
-nav .tl-nav {
+
+.tl-nav {
   list-style: none;
   display: flex;
   padding: 30px 0px;
   gap: 15px;
 }
-nav .tl-nav a {
+.tl-nav a {
   font-family: "Proxima Nova Condensed";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  color: #0E4174;
+  color: #0e4174;
 }
 
 section {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+}
+section .dropdown-menu {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  border: none;
+  translate: 40px;
+}
+section .dropdown-menu .tl-nav {
+  flex-direction: column;
+  padding: 0 20px;
+  margin: 0;
+  gap: 2px;
 }
 section header.decade {
   display: flex;
@@ -48,9 +60,9 @@ section header.decade {
   transition: 0.2s all ease-in-out;
   transform-origin: top;
 }
-section header.decade a, section header.decade a:hover, section header.decade a:visited, section header.decade a:active {
+section header.decade a, section header.decade a:visited, section header.decade a:active {
   text-decoration: none;
-  color: inherit;
+  color: #0057b7;
 }
 section header.decade::before {
   /* Ellipse 1 */
@@ -109,6 +121,10 @@ section .tl-card .tl-content .tl-img img {
 }
 section .tl-card .tl-content .tl-img:has(img[src=""]) {
   display: none;
+}
+section .tl-card .tl-content .tl-img figcaption {
+  color: #595959;
+  font-size: 0.9em;
 }
 
 /* Tablet styles */
