@@ -34,6 +34,7 @@ nav .tl-nav a {
 section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 section header.decade {
   display: flex;
@@ -42,11 +43,10 @@ section header.decade {
   background: white;
   color: #0057b7;
   align-items: center;
-  padding: 30px 0px 0px 0px;
   position: sticky;
   top: 0px;
   transition: 0.2s all ease-in-out;
-  transform-origin: 0;
+  transform-origin: top;
 }
 section header.decade a, section header.decade a:hover, section header.decade a:visited, section header.decade a:active {
   text-decoration: none;
@@ -67,7 +67,7 @@ section header.decade .chevron {
 }
 section header.decade.small {
   font-size: 1rem;
-  padding: 10px 0;
+  padding: 10px 0 10px 0;
 }
 section header.decade.small .chevron {
   visibility: visible;
