@@ -63,6 +63,7 @@ section header.decade {
 section header.decade a, section header.decade a:visited, section header.decade a:active {
   text-decoration: none;
   color: #0057b7;
+  pointer-events: none;
 }
 section header.decade::before {
   /* Ellipse 1 */
@@ -83,6 +84,9 @@ section header.decade.small {
 }
 section header.decade.small .chevron {
   visibility: visible;
+}
+section header.decade.small a {
+  pointer-events: all;
 }
 section .tl-card {
   display: flex;

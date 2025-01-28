@@ -70,6 +70,7 @@ section {
         a, a:visited, a:active {
             text-decoration: none;
             color: $primary-color;
+            pointer-events: none;
         }
         
         &::before {
@@ -95,6 +96,8 @@ section {
             .chevron {
                 visibility: visible;
             }
+
+            a {pointer-events: all;}
         }
         
     }
