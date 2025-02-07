@@ -61,3 +61,36 @@ header.forEach(element => {
       <li class="tl-nav-item"><a href="#section14">0000s</a></li>
     </ul>`;
 });
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* fade in when in view */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+const section = document.querySelectorAll(".tl-card");
+
+section.forEach((el) => {
+  el.classList.add("will-fade-in");
+});
+
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0,
+};
+
+function observerCallback(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-in");
+    }
+    // Add the else if you want to fade out images out of the viewport
+    else {
+      entry.target.classList.remove("fade-in");
+    }
+  });
+}
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+section.forEach((el) => observer.observe(el));
