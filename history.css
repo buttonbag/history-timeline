@@ -101,41 +101,46 @@ section .tl-card .tl-content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 15px;
-  gap: 10px;
+  padding: 45px 15px;
+  gap: 30px;
   border-left: 1px solid #999;
   width: 100%;
 }
 section .tl-card .tl-content .tl-text {
   display: flex;
   flex-direction: column;
-  flex: 1 1 50%;
+  width: 100%;
   gap: 10px;
 }
 section .tl-card .tl-content .tl-text .tl-headline {
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  font-size: 1.55rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 section .tl-card .tl-content .tl-img {
-  flex: 0 0 50%;
+  flex: 0 1 auto;
   width: 100%;
-  height: auto;
+  height: 400px;
 }
 section .tl-card .tl-content .tl-img figure, section .tl-card .tl-content .tl-img img {
   margin: 0;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: 100%;
+  background: #eee;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 section .tl-card .tl-content .tl-img:has(img[src=""]) {
   display: none;
 }
 section .tl-card .tl-content .tl-img figcaption {
-  color: #595959;
-  font-size: 0.9em;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 10px;
 }
 
 /* Tablet styles */
@@ -153,8 +158,11 @@ section .tl-card .tl-content .tl-img figcaption {
   section .tl-card .tl-content {
     flex-direction: row;
   }
-  section .tl-card .tl-img {
-    height: 400px;
+  section .tl-card .tl-content .tl-text {
+    flex: 1 0 50%;
+  }
+  section .tl-card .tl-content .tl-img {
+    height: 500px;
   }
 }
 /* Small laptop styles */
