@@ -127,7 +127,7 @@ header.decade.small a {
 .tl-card .tl-content .tl-img {
   flex: 0 1 auto;
   width: 100%;
-  height: 400px;
+  height: auto;
   display: flex;
 }
 .tl-card .tl-content .tl-img figure {
@@ -136,7 +136,7 @@ header.decade.small a {
   padding: 10px;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 300px;
   position: relative;
 }
 .tl-card .tl-content .tl-img img {
@@ -146,10 +146,10 @@ header.decade.small a {
 }
 .tl-card .tl-content .tl-img figcaption {
   color: #333;
-  font-size: 0.9em;
+  font-size: 0.75em;
   padding: 10px;
   position: absolute;
-  bottom: 0;
+  bottom: -8%;
   left: 0;
   background: inherit;
   width: 100%;
@@ -174,21 +174,28 @@ header.decade.small a {
   #dpu-timeline {
     font-size: 1.2rem;
   }
-}
-/* Tablet landscape styles */
-@media (min-width: 768px) {
-  #dpu-timeline {
-    font-size: 20px;
-  }
 
   .tl-card .tl-content {
     flex-direction: row;
+    height: 600px;
+  }
+  .tl-card .tl-content:has(img[src=""]) {
+    height: auto;
   }
   .tl-card .tl-content .tl-text {
     flex: 1 0 50%;
   }
   .tl-card .tl-content .tl-img {
-    height: 500px;
+    max-height: 500px;
+  }
+  .tl-card .tl-content .tl-img figure {
+    height: auto;
+  }
+}
+/* Tablet landscape styles */
+@media (min-width: 768px) {
+  #dpu-timeline {
+    font-size: 20px;
   }
 }
 /* Small laptop styles */
