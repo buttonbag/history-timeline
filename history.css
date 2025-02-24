@@ -14,6 +14,30 @@ nav {
   /* fixes chrome bug that makes section headers jittery after scrollTo*/
 }
 
+#arrowUp {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  margin: 2%;
+  background: #fff;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+  z-index: 999999;
+  opacity: 0;
+  transition: 0.2s all ease-in-out;
+  display: flex;
+  align-items: center;
+}
+#arrowUp.show {
+  opacity: 1;
+}
+#arrowUp .chevron {
+  rotate: 180deg;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .tl-nav {
   list-style: none;
   display: flex;
@@ -59,12 +83,12 @@ header.decade {
   transform-origin: top;
   z-index: 2;
 }
-header.decade a,
-header.decade a:visited,
-header.decade a:active {
-  text-decoration: none;
+header.decade:not(.small) a,
+header.decade:not(.small) a:visited,
+header.decade:not(.small) a:active {
   color: #0e4174;
   pointer-events: none;
+  text-decoration: none !important;
 }
 header.decade::before {
   /* Ellipse 1 */

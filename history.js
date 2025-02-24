@@ -27,6 +27,7 @@ function monitorHeaderPosition() {
       document.querySelectorAll(`header.${targetClass}.${stickyClass}`).forEach(header => {
         header.classList.remove(stickyClass);
       });
+
     }
   };
 
@@ -94,3 +95,20 @@ function observerCallback(entries) {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 section.forEach((el) => observer.observe(el));
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* show hide back to top */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+const navTop = document.querySelector("#arrowUp");
+
+function toggleArrow() {  
+  if (window.scrollY >= 200) {
+    navTop.classList.add("show")
+  } else {
+    navTop.classList.remove("show")
+  }
+}
+
+document.addEventListener("scroll", toggleArrow);
