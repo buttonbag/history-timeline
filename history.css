@@ -20,7 +20,6 @@ nav {
   right: 0;
   width: 50px;
   height: 50px;
-  margin: 2%;
   background: #fff;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
   z-index: 999999;
@@ -28,6 +27,7 @@ nav {
   transition: 0.2s all ease-in-out;
   display: flex;
   align-items: center;
+  margin: 10px 10px;
 }
 #arrowUp.show {
   opacity: 1;
@@ -230,11 +230,19 @@ header.decade.small a {
   #dpu-timeline {
     font-size: 24px;
   }
+
+  #arrowUp {
+    margin: 10px 10%;
+  }
 }
 /* Extra large screens */
 @media (min-width: 1400px) {
   #dpu-timeline {
     font-size: 26px;
+  }
+
+  #arrowUp {
+    margin: 10px 20%;
   }
 }
 
