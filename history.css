@@ -178,6 +178,10 @@ header.decade.small a {
 .tl-card .tl-content .tl-img:has(img[src=""]) {
   display: none;
 }
+.tl-card .tl-content .tl-img iframe {
+  background: #eee;
+  padding: 10px;
+}
 
 /* fade animation */
 .will-fade-in {
