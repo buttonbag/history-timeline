@@ -55,6 +55,7 @@ section {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  position: sticky;
 }
 
 .dropdown-menu {
